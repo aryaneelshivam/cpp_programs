@@ -72,6 +72,9 @@ class character{ // private class is used to access the variables and functions 
         constitution = constitution;
         dexterity = dexterity;
     }
+    void display(){ // display function is used to display the variables of the class
+        cout << name << " " << gender << " " << hair_color << " " << age << " " << height << " " << weight << " " << strength << " " << intelligence << " " << wisdom << " " << charisma << " " << luck << " " << constitution << " " << dexterity;
+    }
  
 };
 
@@ -88,8 +91,8 @@ int main(){ // main function is used to execute the code
     s1.age = 20;
     s1.roll_no = 123456;
     cout << s1.name << " " << s1.age << " " << s1.roll_no;
-
-    
+    character c1("John", "Male", "Brown", 20, 180, 70, 100, 100, 100, 100, 100, 100, 100); // constructor is used to initialize the variables of the class
+    c1.display(); // display function is used to display the variables of the class
     return 0;
 }
 
