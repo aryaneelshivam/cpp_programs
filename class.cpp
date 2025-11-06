@@ -58,19 +58,19 @@ class character{ // private class is used to access the variables and functions 
 
     public: // constructor is used to initialize the variables of the class
     character(string name, string gender, string hair_color, int age, int height, int weight, int strength, int intelligence, int wisdom, int charisma, int luck, int constitution, int dexterity){
-        name = name;
-        gender = gender;
-        hair_color = hair_color;
-        age = age;
-        height = height;
-        weight = weight;
-        strength = strength;
-        intelligence = intelligence;
-        wisdom = wisdom;
-        charisma = charisma;
-        luck = luck;
-        constitution = constitution;
-        dexterity = dexterity;
+        this->name = name;
+        this->gender = gender;
+        this->hair_color = hair_color;
+        this->age = age;
+        this->height = height;
+        this->weight = weight;
+        this->strength = strength;
+        this->intelligence = intelligence;
+        this->wisdom = wisdom;
+        this->charisma = charisma;
+        this->luck = luck;
+        this->constitution = constitution;
+        this->dexterity = dexterity;
     }
     void display(){ // display function is used to display the variables of the class
         cout << name << " " << gender << " " << hair_color << " " << age << " " << height << " " << weight << " " << strength << " " << intelligence << " " << wisdom << " " << charisma << " " << luck << " " << constitution << " " << dexterity;
