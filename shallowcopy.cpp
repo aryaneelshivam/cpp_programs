@@ -32,7 +32,7 @@ class test{
 
 int main(){
     test t1(10);
-    test t2 = t1;
+    test t2(t1);
     t1.set_marks(20);
     t1.get_marks();
     t2.get_marks(); //t2 is a shallow copy of t1 so it will have the same value of marks as t1
