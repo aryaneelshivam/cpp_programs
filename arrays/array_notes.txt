@@ -1,0 +1,7 @@
+1. Binary search 
+2. linear search 
+3. Insertion sort, selection sort, bubble sort. [to print with every pass]
+4. rotating array 
+5. merging/ concatination
+
+

@@ -54,6 +54,15 @@ class Stack{
         }
     }
 
+    void peek(){
+        if(isempty()){
+            cout << "stack is empty" << endl;
+            return;
+        } else {
+            cout << "top element is: " << top->data << endl; //returning the top element of the stack
+        }
+    }
+
 };
 
 int main(){
@@ -66,5 +75,6 @@ int main(){
     s1.pop();
     cout << "after popping the stack is:";
     s1.display();
+    s1.peek();
     return 0;
 }

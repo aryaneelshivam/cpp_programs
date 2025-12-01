@@ -2,6 +2,12 @@
 #include <fstream>
 using namespace std;
 
+struct student{
+    string name;
+    int roll_number;
+    float marks;
+};
+
 
 void appendfile(string filename, string text){ //appends new data without overridding the existing data
     ofstream fin(filename, ios::app);
@@ -104,10 +110,31 @@ void useAte(string filename){ //writes to the file at any given position
         cout << "Error opening file" << endl;
     }
     outfile << "Hello World"; //write to the file
-    outfile.seekp(0); //seek to the beginning of the file; we can move the cursor using seekpeek
+    outfile.seekp(0, ios::beg); //seek to the beginning of the file; we can move the cursor using seekpeek
     outfile << "Hello World"; //write to the file
     outfile.close(); //close the file
     cout << "File created successfully" << endl;
+}
+
+void binaryReadWrite(string binary_filename, student s1){
+    ofstream outfile(binary_filename, ios::binary);
+    if(!outfile){
+        cout << "Error opening file" << endl;
+    }
+    outfile.write((char*)&s1, sizeof(s1));
+    outfile.close();
+
+    ifstream infile(binary_filename, ios::binary);
+    if(!infile){
+        cout << "Error opening file" << endl;
+    }
+    student s2;
+    infile.read((char*)&s2, sizeof(s2));
+    infile.close();
+    cout << "Name: " << s2.name << endl;
+    cout << "Roll Number: " << s2.roll_number << endl;
+    cout << "Marks: " << s2.marks << endl;
+
 }
 
 
@@ -124,6 +151,9 @@ int main(){
    readfile(filename);
    cout << "Number of lines in the file is: " << numberoflines(filename) << endl;
    cout << "Number of vowels  and consonants in the file is: " << vowel_and_consonant_count(filename) << endl;
+   string binary_filename = "student.dat";
+   student s1 = {"Aryaneel", 1234567890, 90.0};
+
    return 0;
    
 }

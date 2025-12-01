@@ -73,7 +73,6 @@ void deleteEndNode(Node* head){
         temp = temp->next;
     }
     delete temp->next; //delete the last node
-    temp->next = NULL; //set the next pointer of the second last node to NULL
     cout << "End node deleted" << endl;
 }
 
@@ -166,6 +165,41 @@ bool ispalindrome(Node* head){
     return true;
 }
 
+Node* reverseKnodes(Node* head, int k){
+    Node* current = head;
+    Node*next = NULL;
+    Node* prev = NULL;
+    int count = 0;
+    while(current != NULL && count < k){ //iterate till the count is less than k
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+        count++;
+    }
+    if(next != NULL){
+        head->next = reverseKnodes(next, k); //recursive call to reverse the next k nodes
+    }
+    return prev; //return the new head of the reversed linked list
+}
 
-
+Node* mergeTwoSortedLists(Node* head1, Node* head2){
+    Node* dummynode = new Node();
+    Node* tail = dummynode;
+    while(head1 != NULL && head2 != NULL){
+        if(head1->data < head2->data){
+            tail->next = head1;
+            head1 = head1->next;
+        } else {
+            tail->next = head2;
+            head2 = head2->next;
+        }
+    }
+    if(head1 != NULL){
+        tail->next = head1;
+    } else {
+        tail->next = head2;
+    }
+    return dummynode->next; //return the new head of the merged linked list
+}
 
