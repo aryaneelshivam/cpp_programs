@@ -9,12 +9,13 @@ bool ispalindrome(int arr[], int n){
         s.push(arr[i]); //pushing elements of an array to the stack
     }
     for(int i = 0; i < n; i++){
-        if(arr[i] != s.top()){ //if the element of the array is not equal to the top element of the stack, then the array is not a palindrome
+        if(arr[i] != s.top()){
             return false;
-        } else {
-            return true;
         }
+        s.pop();
     }
+    return true;
+    
 };
 
 int main(){
