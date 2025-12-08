@@ -1,0 +1,8 @@
+Root //starting node
+Parent 
+Child
+Leaf //no child
+Non Leaf //has children
+Siblings //same level nodes 
+Left Skew Tree  //left child is only child 
+Right Skew Tree //right child is only child 
