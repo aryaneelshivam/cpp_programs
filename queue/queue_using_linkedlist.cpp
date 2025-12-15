@@ -20,7 +20,7 @@ class Queue{
         count = 0;
     }
 
-    void enqueue(int data){
+    void enqueue(int data){ //queue uses the concept of insert at end and delete at front
         Node* newnode = new Node();
         newnode->data = data;
         newnode->next = NULL;

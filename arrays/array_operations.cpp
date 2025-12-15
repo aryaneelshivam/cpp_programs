@@ -22,6 +22,7 @@ void reverseArray(int arr[], int n){ //function to reverse the array
 void insertElement(int arr[], int n, int element, int position){
     for(int i = n; i > position; i--){ //shift all elements to the right to make space for the new element
         arr[i] = arr[i-1]; //shift the element to the right
+        n++;
     }
     arr[position] = element; //insert the new element at the specified position
 }
@@ -29,6 +30,7 @@ void insertElement(int arr[], int n, int element, int position){
 void deleteElement(int arr[], int n, int position){
     for(int i = position; i < n-1; i++){ //shift all elements to the left to fill the gap left by the deleted element
         arr[i] = arr[i+1]; //shift the element to the left
+        n--;
     }
 }
 

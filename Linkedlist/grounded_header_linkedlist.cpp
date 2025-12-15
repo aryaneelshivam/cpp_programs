@@ -25,7 +25,9 @@ void insertAtBeg(Node* &head, int data) {
     }
     // find last node to maintain circular link
     Node* tail = head;
-    while (tail->next != head) tail = tail->next;
+    while (tail->next != head){
+        tail = tail->next;
+    }
     newnode->next = head;
     tail->next = newnode;
     head = newnode;
@@ -40,7 +42,9 @@ void insertAtEnd(Node* &head, int data) {
         return;
     }
     Node* tail = head;
-    while (tail->next != head) tail = tail->next;
+    while (tail->next != head){
+        tail = tail->next;
+    }
     tail->next = newnode;
     newnode->next = head;
 }
