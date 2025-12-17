@@ -20,7 +20,7 @@ class food{
 
     food operator++(){ //overloading the ++ operator
         ++price;
-        return *this;
+        return *this; //returns the updated object
     }
 
     food operator--(){ //overloading the -- operator

@@ -1,4 +1,4 @@
-// write a vector class having x & y components; overload * operator to calculate dot product if two vector 
+// write a vector class having x & y components; overload + operator to calculate dot product if two vector 
 #include <iostream>
 #include <vector>
 using namespace std;

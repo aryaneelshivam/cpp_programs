@@ -16,7 +16,7 @@ void readfromfile(string filename){
 bool searchword(string filename, string word){
     ifstream infile(filename);
     string word_stored; //declare a variable to store the word read from the file
-    while(infile >> word_stored){
+    while(infile >> word_stored){ //this reads the file word by word
         if(word_stored == word){ //this checks if the word read from the file is equal to the word to be searched
             return true;
         }

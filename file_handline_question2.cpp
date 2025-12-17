@@ -27,7 +27,6 @@ void read_from_file(string filename, employee e1){
     infile.close();
     employee e2;
     cout << "ID: " << e2.id << " Salary: " << e2.salary << endl;
-
 }
 
 int count_records(string filename){

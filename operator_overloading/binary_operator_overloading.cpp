@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
-class Complex{
+class Complex{ 
     int real;
     int img;
     public:
     Complex(int r, int i) : real(r), img(i){}
     void display(){
-        cout << real << " + " << img << "i" << endl;
+        cout << real << " + " << img << "i" << endl; // displays the complex number
     }
 
     Complex operator+(Complex c){

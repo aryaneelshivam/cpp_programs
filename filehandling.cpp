@@ -109,7 +109,7 @@ void useAte(string filename){ //writes to the file at any given position
     if(!outfile){
         cout << "Error opening file" << endl;
     }
-    outfile << "Hello World"; //write to the file
+    //outfile << "Hello World"; //write to the file
     outfile.seekp(0, ios::beg); //seek to the beginning of the file; we can move the cursor using seekpeek
     outfile << "Hello World"; //write to the file
     outfile.close(); //close the file
