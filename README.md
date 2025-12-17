@@ -11,8 +11,9 @@ Collection of array-based programs and algorithms:
 - **Sorting Algorithms**: Bubble Sort, Insertion Sort, Selection Sort, Merge Sort
 - **Searching**: Binary Search
 - **Array Operations**: Merging sorted arrays, reversing arrays
-- **Array Manipulation**: Push zeros to back
+- **Array Manipulation**: Push zeros to back (`pushzerostoback.cpp`)
 - **Object Arrays**: Working with arrays of objects
+- **Advanced Sorting**: Sorting using Priority Queue (`array_sorting_usingPQ.cpp`)
 
 #### 🔗 [Linked Lists](./Linkedlist)
 Various linked list implementations and operations:
@@ -72,6 +73,9 @@ Operator overloading implementations:
 #### 📋 Memory Management
 - `deepcopy.cpp` - Deep copy implementation
 - `shallowcopy.cpp` - Shallow copy concepts
+- `memory_leaks.cpp` - Demonstrating memory leaks
+- `memory_allocation_failure.cpp` - Handling allocation failures
+- `memory_leak_pointers.cpp` - Pointer management and leaks
 
 #### 🌳 Inheritance
 - `inheretence.cpp` - Basic inheritance
@@ -79,10 +83,21 @@ Operator overloading implementations:
 - `multiple_inheretence.cpp` - Multiple inheritance
 - `diamond_problem_inheretence.cpp` - Diamond problem resolution
 
+#### 🎭 [Polymorphism](./Polymorphism)
+- `poly1.cpp` - Basic polymorphism example
+- `poly2.cpp` - Runtime polymorphism with virtual functions
+- `poly3.cpp` - Abstract classes and pure virtual functions
+- `virtual_destructor.cpp` - Importance of virtual destructors
+
 ### Additional Topics
 
-#### 🌲 Trees
-- `binarytree.cpp` - Binary tree implementation
+#### 🌲 [Trees](./binaryTree)
+- `binarytree.cpp` - Basic binary tree implementation
+- `binarytreebasic.cpp` - Comprehensive binary tree operations
+- `binarySearchTree_target.cpp` - BST search operations
+- `deletion_bst.cpp` - Deleting nodes from BST
+- `insertion_bst.cpp` - Inserting nodes into BST
+- `level_order_traversal.cpp` - BFS traversal of trees
 
 #### 📝 File Handling
 - `filehandling.cpp` - File I/O operations
